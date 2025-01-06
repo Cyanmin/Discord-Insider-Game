@@ -1,10 +1,10 @@
-require('dotenv').config();
 const { REST, Routes } = require('discord.js');
+require('dotenv').config({ path: './config/.env' });
 
 const commands = [
     {
-        name: 'ping',
-        description: 'Replies with Pong!',
+        name: 'join',
+        description: 'ゲームに参加',
     },
 ];
 
@@ -12,14 +12,12 @@ const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN);
 
 (async () => {
     try {
-        console.log('Started refreshing application (/) commands.');
-
+        console.log('コマンドを登録中...');
         await rest.put(
-            Routes.applicationCommands(process.env.CLIENT_ID),
+            Routes.applicationGuildCommands(process.env.CLIENT_ID, '909989164622176297'),
             { body: commands },
         );
-
-        console.log('Successfully reloaded application (/) commands.');
+        console.log('コマンド登録完了!');
     } catch (error) {
         console.error(error);
     }
