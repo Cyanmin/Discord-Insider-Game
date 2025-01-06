@@ -1,0 +1,26 @@
+# 環境変数ファイル
+.env
+
+# ログファイル
+*.log
+
+# ビルド出力
+dist/
+build/
+
+# キャッシュや一時ファイル
+*.tmp
+*.cache
+*.bak
+
+# OSやIDEによるファイル
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Node.jsモジュール
+node_modules/
+
+# テストカバレッジレポート
+coverage/
