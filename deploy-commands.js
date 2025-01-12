@@ -6,6 +6,18 @@ const commands = [
         name: 'join',
         description: 'ゲームに参加',
     },
+    {
+        name: 'exit',
+        description: 'ゲームから退出',
+    },
+    {
+        name: 'role',
+        description: '役職の設定',
+    },
+    {
+        name: 'sendtheme',
+        description: 'テーマを送信',
+    },
 ];
 
 const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN);
